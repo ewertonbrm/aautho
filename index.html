@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Insta</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="icon" href="icon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="icon-512x512.png" />
+
+  <style>
+    /* 1. Remove margens e preenchimentos padrão do body e html */
+    html, body {
+      margin: 0;
+      padding: 0;
+      /* 2. Define a altura da página como 100% da viewport */
+      height: 100%;
+    }
+
+    /* 3. Ativa o Flexbox no body */
+    body {
+      display: flex;
+      /* 4. Centraliza os itens horizontalmente (eixo principal) */
+      justify-content: center;
+      /* 5. Centraliza os itens verticalmente (eixo transversal) */
+      align-items: center;
+      /* Opcional: Estilo de fonte para melhor visualização */
+      font-family: sans-serif;
+      font-size: 1.2em;
+    }
+
+    /* Opcional: Centraliza o texto dentro do parágrafo, embora não seja estritamente necessário neste layout de Flexbox */
+    p {
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+  <script>
+    setTimeout(() => {
+    window.location.href = "https://www.androidauthority.com";
+  }, 5000);
+  </script>
+</head>
+<body>
+  <p>Carregando Android Authority...</p>
+</body>
+</html>
